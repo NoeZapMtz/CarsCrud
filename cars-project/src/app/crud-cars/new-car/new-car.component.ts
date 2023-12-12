@@ -52,21 +52,11 @@ export class NewCarComponent {
       //Call the service function that adds and updates list
       if (this.carsService.addCar(newCar)){
 
-        //Reset all validations
-        this.newCarForm.reset();
-        
-        const makeControll= this.newCarForm.get('make');
-        if(makeControll){
-          makeControll.clearValidators();
-          makeControll.updateValueAndValidity();
-        }
-        const modelControll= this.newCarForm.get('model');
-        if(modelControll){
-          modelControll.clearValidators();
-          modelControll.updateValueAndValidity();
-        }
-
-        this.newCarForm.reset({make:'', model: '', year: this.actualDate.getFullYear() });
+        this.newCarForm = this.formBuilder.group({
+          make: ['', Validators.required],
+          model: ['', Validators.required],
+          year: [this.actualDate.getFullYear(), [Validators.required, Validators.pattern('^[0-9]*$')]],
+        });
 
         //Success message
         Swal.fire({
@@ -79,7 +69,7 @@ export class NewCarComponent {
       
       //Validations in case the form returns a problem
       let errorText = '';
-      if(newCar.year === 0 || 
+      if(newCar.year <= 0 || 
         newCar.year === null) { errorText = 'A year is needed'; }
       if(newCar.year >= this.actualDate.getFullYear()+2 ) { errorText = 'This year has not started yet'; }
       if(newCar.model === ''){ errorText = 'A model is needed'; }
