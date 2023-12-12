@@ -1,0 +1,22 @@
+<form [formGroup]="newCarForm" (ngSubmit)="submitForm()" class="custom-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Make</mat-label>
+      <input matInput formControlName="make" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Model</mat-label>
+      <input matInput formControlName="model" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Year</mat-label>
+      <input matInput type="number" formControlName="year" required>
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button color="warn" type="button" (click)="this.close=true; this.closeDialog(false); ">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Add</button>
+    </div>
+  </form>
+  

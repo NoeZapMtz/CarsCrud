@@ -1,0 +1,45 @@
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  mat-label {
+    color: #4285f4; /* Color de etiquetas */
+  }
+  
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde del input */
+  }
+  
+  input.mat-input {
+    padding: 10px; /* Ajustar el relleno del input */
+    border: none; /* Eliminar el borde predeterminado del input */
+    box-shadow: none; /* Eliminar la sombra del input */
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    button{
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 50%;
+    }
+  }
+  

@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #1976D2;
+    color: #fff;
+    text-align: center;
+    padding: 1.3em; 
+    margin: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em; 
+    letter-spacing: 1px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFC107;
+}
+
+
+
+
+.mat-elevation-z2 {
+    margin: 20px auto;
+    max-width: 600px;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+  
+    th{
+        background-color: #1976D2;
+        color: #fff;
+        text-align: center;
+        padding: 1.3em; 
+        margin: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        font-size: 1.2em; 
+        letter-spacing: 1px;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #1976D2;
+      color: white;
+    }
+  
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  .actions{
+    display: flex;
+    justify-content: center;
+  }
+
+ 
+.mat-delete-button {
+    min-width: 0.5em; 
+    height: 1.5em; 
+    display: flex;
+    align-items: center;
+  
+    /* Estilos al pasar el ratón sobre el botón */
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.479); 
+    }
+  
+    /* Estilos cuando el botón está desactivado */
+    &:disabled {
+      background-color: #e0e0e0; /* Color más claro cuando el botón está desactivado */
+      color: #9e9e9e; /* Texto en color gris cuando el botón está desactivado */
+    }
+}
+
+.mat-add-button {
+    width: 100%; 
+    height: 2.5em; 
+    display: flex;
+    align-items: center;
+  
+    /* Estilos al pasar el ratón sobre el botón */
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.479); 
+    }
+  
+    /* Estilos cuando el botón está desactivado */
+    &:disabled {
+      background-color: #e0e0e0; /* Color más claro cuando el botón está desactivado */
+      color: #9e9e9e; /* Texto en color gris cuando el botón está desactivado */
+    }
+  }

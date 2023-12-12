@@ -1,0 +1,47 @@
+<header>
+  <h1>Cars List</h1>
+</header>
+<div>
+  <!-- Add Button -->
+  <div class="mat-elevation-z2">
+    <button mat-raised-button color="primary" class="mat-add-button" (click)="agregar()">
+      <mat-icon>add</mat-icon> 
+      Add Car 
+    </button>
+  </div>
+
+  <!-- Table -->
+  <div class="mat-elevation-z2">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Columns -->
+      <ng-container matColumnDef="make">
+        <th mat-header-cell *matHeaderCellDef> Make </th>
+        <td mat-cell *matCellDef="let car"> {{car.make}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="model">
+        <th mat-header-cell *matHeaderCellDef> Model </th>
+        <td mat-cell *matCellDef="let car"> {{car.model}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <td mat-cell *matCellDef="let car"> {{car.year}} </td>
+      </ng-container>
+
+      <!-- Delete Button -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let car" class="actions"> 
+          <button mat-icon-button color="warn" class="mat-delete-button" (click)="eliminar(car.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let fila; columns: columns;"></tr>
+    </table>
+  </div>
+</div>
+
